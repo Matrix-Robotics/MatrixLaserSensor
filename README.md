@@ -2,8 +2,8 @@
 Matrix Laser sensor is a laser rangefinder, 
 communicate by I2C interface.
 ## Features
-Support 1~64Hz sample rate. <br>
-Support 0~2047mm distance detection, scale down to 1mm.
+Support 1-64Hz sample rate. <br>
+Support 0-2047mm distance detection, scale down to 1mm.
 ## Repository Contents
 * [**/docs**](./docs) - MATRIX Laser Sensor documentation.
 * [**/examples**](./examples) - Example sketches for the library (.ino). Run these by Arduino IDE.
