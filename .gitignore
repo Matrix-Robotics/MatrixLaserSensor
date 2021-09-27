@@ -1,0 +1,9 @@
+# vscode config
+.vscode
+
+# build folder
+build
+
+# test code
+app.ino
+test
