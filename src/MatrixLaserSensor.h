@@ -21,14 +21,12 @@ class MatrixLaser{
 	} LaserRegType;
 	
 	uint8_t _ch=0, _ver=1;
-	uint8_t setting = 0x0F;
 	uint8_t i2cReadData(LaserRegType reg);
 	void i2cMUXSelect();
 	void i2cWriteData(LaserRegType reg, uint8_t data);
 public:
 	friend class MiniI2C;
 	bool begin();
-	void setSR(uint8_t rate);
 	uint16_t getDistance();
 };
 
