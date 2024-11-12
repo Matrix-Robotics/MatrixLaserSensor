@@ -15,15 +15,14 @@ bool MatrixLaser::begin(){
 	}	
 }
 
-uint16_t MatrixLaser::getDistance(){
-	i2cMUXSelect();
-	if(((i2cReadData(Device_CONFIG) & 0x01) == 0)){
-		uint16_t data = (uint16_t)(i2cReadData(Distance_H) << 8 | i2cReadData(Distance_L));
-		return data;
-	}
-	else{
-		return 8191;
-	}
+int MatrixLaser::getDistance() {
+    i2cMUXSelect();
+    if (((i2cReadData(Device_CONFIG) & 0x01) == 0)) {
+        int data = (int)(i2cReadData(Distance_H) << 8 | i2cReadData(Distance_L));  // 改為 int 型別
+        return data;
+    } else {
+        return 8191;
+    }
 }
 
 uint8_t MatrixLaser::i2cReadData(LaserRegType reg){

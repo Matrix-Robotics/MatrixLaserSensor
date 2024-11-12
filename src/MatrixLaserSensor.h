@@ -27,7 +27,7 @@ class MatrixLaser{
 public:
 	friend class MiniI2C;
 	bool begin();
-	uint16_t getDistance();
+	int getDistance();
 };
 
 #endif
